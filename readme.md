@@ -1,5 +1,5 @@
-# React-A-Day: Day 1
-* Basic Hello World
+# React-A-Day: Day 2
+* Basic Nesting
 
 ### Goal
 
