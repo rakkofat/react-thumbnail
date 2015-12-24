@@ -1,5 +1,5 @@
 # React-A-Day: Day 2
-* Basic Nesting
+* Basic Nesting and Lists
 
 ### Goal
 

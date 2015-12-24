@@ -36,16 +36,35 @@
     }
   });
 
+  var ThumbnailList = React.createClass({
+    render: function() {
+      var list = this.props.thumbnailData.map(function(thumbnailProps){
+        return <Thumbnail {...thumbnailProps}/>
+      });
+      return <div>
+        {list}
+      </div>
+    }
+  });
+
   var options = {
-    title: 'See Tutorials',
-    number: 32,
-    header: 'Learn React',
-    description: 'React is weird and I am not sure if I like it or not. React is weird and I am not sure if I like it or not. React is weird and I am not sure if I like it or not. ',
-    imageUrl: 'http://formatjs.io/img/react.svg'
+    thumbnailData: [{
+      title: 'Show Courses',
+      number: 32,
+      header: 'Learn React',
+      description: 'React is weird and I am not sure if I like it or not. React is weird and I am not sure if I like it or not. React is weird and I am not sure if I like it or not. ',
+      imageUrl: 'http://formatjs.io/img/react.svg'
+    },{
+      title: 'Show Courses',
+      number: 25,
+      header: 'Learn Gulp',
+      description: 'Gulp will speed up your development workflow.',
+      imageUrl: 'https://raw.githubusercontent.com/gulpjs/artwork/master/gulp-2x.png'
+    }]
   };
 
   // React, please render this class
-  var element = React.createElement(Thumbnail, options);
+  var element = React.createElement(ThumbnailList, options);
 
   // React, after you render this class, please place it in my body tag
   React.render(element, document.querySelector('.target'));
